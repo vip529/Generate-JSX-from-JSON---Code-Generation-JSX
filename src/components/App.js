@@ -108,7 +108,7 @@ const myData = {
         });
         let childString = childArray.join(" ");
   
-        return `<${data.name} ${style}> ${childString} <${data.name}/>`;
+        return `<${data.name} ${style}> ${childString} </${data.name}>`;
       }
     }
     return jsonToJSX(props);
