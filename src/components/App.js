@@ -93,7 +93,7 @@ const myData = {
               nKey[1] = nKey[1].charAt(0).toUpperCase() + nKey[1].slice(1);
             }
             nKey = nKey.join("");
-            propArray.push(`${nKey}:"${data.style[key]}"`);
+            propArray.push(`${nKey}:${Number.isInteger(data.style[key])?`${data.style[key]}`:`"${data.style[key]}"`}`);
           }
         }
         let propString = propArray.join(", ");
