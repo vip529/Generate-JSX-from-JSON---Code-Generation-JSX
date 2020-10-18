@@ -46,7 +46,7 @@ class App extends Component {
             }
           }
           let propString = propArray.join(", ");
-          style = `style={{${propString}}}\r\n`;
+          style = `style={{${propString}}}`;
         }
     
         if (data.children.length === 0) {
