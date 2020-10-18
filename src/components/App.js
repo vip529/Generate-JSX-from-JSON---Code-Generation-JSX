@@ -57,7 +57,7 @@ class App extends Component {
           let childArray = (data.children || []).map((childData) => {
             return this.jsonToJSX(childData);
           });
-          let childString = childArray.join("\r\n");
+          let childString = childArray.join(" ");
     
           return `
           <${data.name} ${style}>
@@ -68,7 +68,7 @@ class App extends Component {
       }
       render() {
         let result = this.jsonToJSX(myData);
-        return `${result}`;
+        return JSON.stringify(result);;
       }
 }
 
