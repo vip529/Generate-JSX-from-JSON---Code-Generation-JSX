@@ -81,7 +81,7 @@ const myData = {
     ]
   }
 
-  export default function App(){
+  export default function App(props){
     const jsonToJSX = (data) =>{
       let style = "";
       if (Object.keys(data.style).length !== 0) {
@@ -111,5 +111,5 @@ const myData = {
         return `<${data.name} ${style}> ${childString} <${data.name}/>`;
       }
     }
-    return jsonToJSX(myData);
+    return jsonToJSX(props);
   }
