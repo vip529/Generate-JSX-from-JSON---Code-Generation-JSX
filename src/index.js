@@ -2,6 +2,33 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 function generateCodeFromObject(obj){
+    let myData = {
+"type": "div",
+"name": "Clock",
+"root": true,
+"style": {
+"display": "flex",
+"flex-direction": "row",
+"justify-content": "center"
+},
+"children": [
+{
+"type": "div",
+"name": "Hour",
+"style": {},
+"children": []
+},
+{
+"type": "span",
+"name": "Minute",
+"style": {
+"color": "green",
+"font-size": 30
+},
+"children": []
+}
+]
+}
     const jsonToJSX = (data) =>{
       let style = "";
       if (Object.keys(data.style).length !== 0) {
@@ -29,13 +56,13 @@ function generateCodeFromObject(obj){
         });
         let childString = childArray.join(" ");
   
-        return (`
+        return `
         <${data.name} ${style}> 
             ${childString} 
-        </${data.name}>`).toString();
+        </${data.name}>`
       }
     }
-    return jsonToJSX(obj).toString();    
+    return jsonToJSX(myData).toString();    
 }
    
 module.exports=generateCodeFromObject;
