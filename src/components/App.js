@@ -29,7 +29,7 @@ import '../styles/App.css';
         });
         let childString = childArray.join(" ");
   
-        return `<${data.name} ${style}> ${childString} <${data.name}/>`;
+        return `<${data.name} ${style}> ${childString} </${data.name}>`;
       }
     }
     return toString(jsonToJSX(props));
