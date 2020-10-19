@@ -21,14 +21,14 @@ function generateCodeFromObject(obj){
       }
   
       if (data.children.length === 0) {
-        return `<${data.name} ${style}/>`;
+        return (`<${data.name} ${style} />`).toString();
       } else {
         let childArray = (data.children || []).map((childData) => {
           return jsonToJSX(childData);
         });
         let childString = childArray.join(" ");
   
-        return `<${data.name} ${style}> ${childString} </${data.name}>`;
+        return (`<${data.name} ${style}> ${childString} </${data.name}>`).toString();
       }
     }
     return jsonToJSX(obj).toString();    
