@@ -1,85 +1,6 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-const myData = {
-    "type": "div",
-    "name": "Clock",
-    "root": true,
-    "style": {
-      "display": "flex",
-      "flex-direction": "row",
-      "justify-content": "center"
-    },
-    "children": [
-      {
-        "type": "div",
-        "name": "Hour",
-        "style": {},
-        "children": [
-            {
-                "type": "div",
-                "name": "Hour",
-                "style": {},
-                "children": [
-                    {
-                        "type": "div",
-                        "name": "Hour",
-                        "style": {},
-                        "children": [
-                            {
-                                "type": "div",
-                                "name": "Hour",
-                                "style": {},
-                                "children": [
-                                    {
-                                        "type": "div",
-                                        "name": "Hour",
-                                        "style": {},
-                                        "children": [],
-                                      },
-                                ],
-                              },
-                        ],
-                      },
-                ],
-              },
-        ],
-      },
-      {
-        "type": "span",
-        "name": "Minute",
-        "style": {
-          "color": "green",
-          "font-size": 30
-        },
-        "children": []
-      },
-      {
-        "type": "div",
-        "name": "Hour",
-        "style": {},
-        "children": []
-      },
-      {
-        "type": "div",
-        "name": "Hour",
-        "style": {},
-        "children": []
-      },
-      {
-        "type": "div",
-        "name": "Hour",
-        "style": {},
-        "children": []
-      },
-      {
-        "type": "div",
-        "name": "Hour",
-        "style": {},
-        "children": []
-      },
-    ]
-  }
 
   export default function App(props){
     const jsonToJSX = (data) =>{
@@ -111,5 +32,5 @@ const myData = {
         return `<${data.name} ${style}> ${childString} <${data.name}/>`;
       }
     }
-    return jsonToJSX(props);
+    return toString(jsonToJSX(props));
   }
