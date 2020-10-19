@@ -32,5 +32,5 @@ import '../styles/App.css';
         return `<${data.name} ${style}> ${childString} </${data.name}>`;
       }
     }
-    return toString(jsonToJSX(props));
+    return (jsonToJSX(props)).toString();
   }
