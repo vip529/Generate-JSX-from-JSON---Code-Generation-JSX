@@ -25,7 +25,7 @@ function toCamelCase(str) {
 
 const jsonToJSX = (data) =>{
 
-  let initial = `<${toTitleCase(data.name)}`;
+  let initial = `<${data.name}`;
   
   if ( data.style !== undefined && Object.keys(data.style).length > 0) {
     let styleKeys = Object.keys(data.style);
@@ -46,7 +46,7 @@ const jsonToJSX = (data) =>{
         initial += jsonToJSX(data.children[i]);
     }
 
-    initial += "</" + toTitleCase(data.name) + ">";
+    initial = `${initial}</${data.name}>`;
     
   } else {
     initial += "/>";
